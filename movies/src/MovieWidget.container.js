@@ -2,16 +2,14 @@ import * as ReactRedux from 'react-redux';
 import * as actions from './MovieWidget.actions';
 import MovieWidget from './MovieWidget'
 
-const MovieWidgetContainer = ReactRedux.connect(
+const container = ReactRedux.connect(
 
     state => ({
         query: state.query,
         movieResults: state.movieResults,
         error: state.error}),
-        {
-            change_query: change_query,
-            getMovie: getMovie
-        }
+
+        actions
 )(MovieWidget);
 
-export default MovieWidgetContainer
+export default container

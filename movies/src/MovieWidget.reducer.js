@@ -18,18 +18,5 @@ export default function reducer(state = INITIAL_STATE, action){
         });
     }
     return state;
-	// if (action.type === 'init') {
-	// 	return INITIAL_STATE;
-    // } else if (action.type === 'change_query') {
-	// 	return Object.assign({}, state, {
-	// 		query: action.value
-	// 	});
-    // }else if (action.type === 'movie_info'){
-    //         return Object.assign({}, state, {
-    //             movieData: action.payload
-    //         });
-    //     }
-	// else {
-	// 	return state;
-	// }
-};
+
+}

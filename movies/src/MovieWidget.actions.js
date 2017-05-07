@@ -1,11 +1,10 @@
 import $ from 'jquery';
 
-export const change_query = (event) => ({
-	type: 'change_query',
-	val: event.target.value
-});
+export function change_query(value){
+    return { type: 'change_query',
+	        value: value };
+        }
 export function getMovie(query){
-    //console.log('get movie')
     return function(dispatch){
         $.ajax({
             method: 'GET',
