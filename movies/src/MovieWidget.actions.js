@@ -11,14 +11,14 @@ export function getMovie(query){
             url: 'https://api.themoviedb.org/3/search/movie',
             data: {
                 api_key: 'f4e8daf104ab36c53dd94a898a00ca4b',
-                q: find
+                query: query
             }
 
         })
         .then(data => {
 
             dispatch({type: 'movie-search-results',
-                      payload: data.results})
+                      results: data.results})
 
         })
         .catch(err => {

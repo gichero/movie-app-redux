@@ -2,7 +2,7 @@ import * as ReactRedux from 'react-redux';
 import * as actions from './MovieWidget.actions';
 import MovieWidget from './MovieWidget'
 
-const container = ReactRedux.connect(
+const MovieWidgetContainer = ReactRedux.connect(
 
     state => ({
         query: state.query,
@@ -12,4 +12,4 @@ const container = ReactRedux.connect(
         actions
 )(MovieWidget);
 
-export default container
+export default MovieWidgetContainer;
